@@ -24,11 +24,12 @@ pipeline {
         
         stage('Docker deploy') {
             steps {
-                sh 'docker run --rm -d -p 5000:5000 amanbajpai/python-demoapp:latest'
+                sh 'docker rm -f python-demoapp'
+                sh 'docker run --name python-demoapp --rm -d -p 5000:5000 amanbajpai/python-demoapp:latest'
             }
         }
     }
-    
+
     post{
         always{
             echo "========always========"
