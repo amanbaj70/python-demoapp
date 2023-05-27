@@ -32,13 +32,13 @@ pipeline {
 
     post{
         always{
-            echo "========always========"
+            echo "========================= Always =============================="
         }
         success{
-            echo "========pipeline executed successfully ========"
+            echo "=================== Pipeline executed successfully ==================="
         }
         failure{
-            echo "========pipeline execution failed========"
+            echo "=================== Pipeline execution failed ======================="
         }
     }
 }
